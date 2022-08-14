@@ -20,7 +20,7 @@ class Todo {
 
     }
 
-    delete(doc) {
+    remove(doc) {
 
         _.remove(this.storage, doc)
         this.save()
@@ -45,4 +45,5 @@ class Todo {
 
 }
 
-export default Todo
+const todo = new Todo()
+export default todo

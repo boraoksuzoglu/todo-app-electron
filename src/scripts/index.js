@@ -1,7 +1,7 @@
 const { ipcRenderer } = require("electron")
 
 import createTodoElement from "../utils/createTodo.js"
-import { createTodo, allTodos } from './manageTodos.js'
+import todo from './todo.js'
 
 document.getElementById("create").addEventListener('click', () => {
 
@@ -10,11 +10,11 @@ document.getElementById("create").addEventListener('click', () => {
 })
 
 ipcRenderer.on("createTodo", (evt, message) => {
-    createTodo(message)
+    todo.create({todo: message})
     createTodoElement(document.getElementById("todos"), message)
 })
 
-for (let i of allTodos()) {
+for (let i of todo.all()) {
     createTodoElement(document.getElementById("todos"), i.todo)
 }
 

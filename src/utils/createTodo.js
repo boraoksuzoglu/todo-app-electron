@@ -1,5 +1,5 @@
 import createElement from "./createElement.js"
-import {deleteTodo} from '../scripts/manageTodos.js'
+import todo from '../scripts/todo.js'
 
 function createTodo(parent, value) {
     var item = createElement("div", parent, {class: "item"})
@@ -13,7 +13,7 @@ function createTodo(parent, value) {
 
     remove.addEventListener('click', () => {
         parent.removeChild(item)
-        deleteTodo(value)
+        todo.remove({todo: value})
     })
 
 }

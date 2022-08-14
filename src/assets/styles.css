@@ -1,0 +1,86 @@
+html {
+	height: 100%;
+}
+
+body {
+	background: #FF416C;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #FF4B2B, #FF416C);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #FF4B2B, #FF416C);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	background-repeat: no-repeat;
+}
+
+.item,
+input {
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.13);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5.4px);
+	-webkit-backdrop-filter: blur(5.4px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	width: 100%;
+}
+
+.item {
+	padding: 1rem;
+}
+
+.column {
+	height: 100%;
+	max-height: calc(100vh - 10rem);
+	overflow: auto;
+}
+
+.column>* {
+	margin-bottom: 0.3rem;
+}
+
+.column> :last-child {
+	margin-bottom: 0;
+}
+
+::-webkit-scrollbar {
+	width: 2px;
+	height: 2px;
+}
+
+::-webkit-scrollbar-button {
+	width: 0px;
+	height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #e1e1e1;
+	border: 0px none #ffffff;
+	border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #000000;
+}
+
+::-webkit-scrollbar-track {
+	background: #666666;
+	border: 0px none #ffffff;
+	border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+	background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+	background: #333333;
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
